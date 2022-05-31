@@ -48,13 +48,6 @@ function Layout() {
 				</Container>
 			</Navbar>
 			<Cards />
-
-			{/* <Route
-				path='/facebook'
-				component={() => {
-					window.location.href = "https://www.facebook.com/";
-				}}
-			/> */}
 		</>
 	);
 }
