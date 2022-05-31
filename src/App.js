@@ -1,6 +1,7 @@
 import Layout from "./components/Layout";
-import "./App.scss";
+import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import "./sass/style.scss";
 
 function App() {
 	return (

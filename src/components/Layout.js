@@ -8,48 +8,47 @@ function Layout() {
 
 	return (
 		<>
-			<div>
-				<Navbar
-					className='navigation'
-					expanded={expanded}
-					bg='dark'
-					variant='dark'
-					expand='lg'
-				>
-					<Container fluid>
-						<Navbar.Brand as={Link} to='/'>
-							<span className='logo__first'>M</span>
-							<span className='logo__second'>S</span>
-						</Navbar.Brand>
-						<Navbar.Toggle
-							onClick={() => setExpanded(expanded ? false : "expanded")}
-							aria-controls='basic-navbar-nav'
-						/>
-						<Navbar.Collapse id='basic-navbar-nav'>
-							<Nav className='mr-auto '>
-								<Nav.Link onClick={() => setExpanded(false)} as={Link} to='/'>
-									Portfolio
-								</Nav.Link>
-								<Nav.Link
-									onClick={() => setExpanded(false)}
-									as={Link}
-									to='/contact'
-								>
-									About me
-								</Nav.Link>
-								<Nav.Link
-									onClick={() => setExpanded(false)}
-									as={Link}
-									to='/accommondation'
-								>
-									Contact me
-								</Nav.Link>
-							</Nav>
-						</Navbar.Collapse>
-					</Container>
-				</Navbar>
-				<Cards />
-			</div>
+			<Navbar
+				className='navigation'
+				expanded={expanded}
+				bg='dark'
+				variant='dark'
+				expand='lg'
+			>
+				<Container fluid>
+					<Navbar.Brand as={Link} to='/'>
+						<span className='logo__first'>M</span>
+						<span className='logo__second'>S</span>
+					</Navbar.Brand>
+					<Navbar.Toggle
+						onClick={() => setExpanded(expanded ? false : "expanded")}
+						aria-controls='basic-navbar-nav'
+					/>
+					<Navbar.Collapse id='basic-navbar-nav' className='navigation_nav'>
+						<Nav className='mr-auto '>
+							<Nav.Link onClick={() => setExpanded(false)} as={Link} to='/'>
+								Portfolio
+							</Nav.Link>
+							<Nav.Link
+								onClick={() => setExpanded(false)}
+								as={Link}
+								to='/contact'
+							>
+								About me
+							</Nav.Link>
+							<Nav.Link
+								onClick={() => setExpanded(false)}
+								as={Link}
+								to='/accommondation'
+							>
+								Contact me
+							</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+			<Cards />
+
 			{/* <Route
 				path='/facebook'
 				component={() => {

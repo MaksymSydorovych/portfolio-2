@@ -1,0 +1,16 @@
+@import "partials/logo";
+body {
+	background-color: rgb(69, 70, 73) !important;
+}
+.card-img {
+	width: 50%;
+}
+a:hover {
+	cursor: pointer;
+}
+.navigation {
+	background: rgb(8, 8, 82) !important;
+	&__nav {
+		font-size: 3em !important;
+	}
+}
