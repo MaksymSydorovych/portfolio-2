@@ -7,28 +7,48 @@ function Cards() {
 			<h2 className='mt-4'>Portfolio</h2>
 			<Container className='d-md-flex d-xs-block mt-5'>
 				<Card>
-					<Card.Title>title</Card.Title>
+					<Card.Title>Project exam</Card.Title>
 					<Card.Body>
 						<Card.Text>description</Card.Text>
-						<a href='google.com'>
+						<a
+							href='https://projec-exam.netlify.app/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<Card.Img src='https://usercontent.one/wp/wp.maksy.site/wp-content/uploads/2018/01/model-building-tutorials-aircraft-guide-2.jpeg'></Card.Img>
 						</a>
 
 						<Card.Text>
-							<a href='google.com'>github a</a>
+							<a
+								href='https://github.com/MaksymSydorovych/project-exam'
+								target='_blank'
+								rel='noreferrer'
+							>
+								github repo link
+							</a>
 						</Card.Text>
 					</Card.Body>
 				</Card>{" "}
 				<Card>
-					<Card.Title>title</Card.Title>
+					<Card.Title>Course Assigment</Card.Title>
 					<Card.Body>
 						<Card.Text>description</Card.Text>
-						<a href='google.com'>
+						<a
+							href='https://course-assigment.netlify.app/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<Card.Img src='https://usercontent.one/wp/wp.maksy.site/wp-content/uploads/2018/01/model-building-tutorials-aircraft-guide-2.jpeg'></Card.Img>
 						</a>
 
 						<Card.Text>
-							<a href='google.com'>github a</a>
+							<a
+								href='https://github.com/MaksymSydorovych/course-assigment'
+								target='_blank'
+								rel='noreferrer'
+							>
+								github repo link
+							</a>
 						</Card.Text>
 					</Card.Body>
 				</Card>{" "}
