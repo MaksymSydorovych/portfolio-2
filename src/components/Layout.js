@@ -1,7 +1,10 @@
 import { Nav, Container, Navbar } from "react-bootstrap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Cards from "./Card";
+import Portfolio from "./Card";
+import About from "./About";
+import Contact from "./Contact";
+import { Routes, Route } from "react-router-dom";
 
 function Layout() {
 	const [expanded, setExpanded] = useState(false);
@@ -17,8 +20,10 @@ function Layout() {
 			>
 				<Container fluid>
 					<Navbar.Brand as={Link} to='/'>
-						<span className='logo__first'>M</span>
-						<span className='logo__second'>S</span>
+						<div className='d-flex'>
+							<p className='logo__first d-flex'>M</p>
+							<p className='logo__second d-flex'>S</p>
+						</div>
 					</Navbar.Brand>
 					<Navbar.Toggle
 						onClick={() => setExpanded(expanded ? false : "expanded")}
@@ -32,14 +37,14 @@ function Layout() {
 							<Nav.Link
 								onClick={() => setExpanded(false)}
 								as={Link}
-								to='/contact'
+								to='/about-me'
 							>
 								About me
 							</Nav.Link>
 							<Nav.Link
 								onClick={() => setExpanded(false)}
 								as={Link}
-								to='/accommondation'
+								to='/contact'
 							>
 								Contact me
 							</Nav.Link>
@@ -47,7 +52,11 @@ function Layout() {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-			<Cards />
+			<Routes>
+				<Route path='/' element={<Portfolio />} />
+				<Route path='/about-me' element={<About />} />
+				<Route path='/contact' element={<Contact />} />
+			</Routes>
 		</>
 	);
 }

@@ -1,0 +1,19 @@
+.navigation {
+	background: #212430 !important;
+
+	&_nav {
+		font-size: 1.4em !important;
+		float: right !important;
+		margin-left: 10%;
+	}
+}
+a:hover {
+	cursor: pointer;
+	color: #1e8bca !important;
+}
+@media screen and (max-width: 989px) {
+	.navigation_nav {
+		margin-left: 1%;
+		float: left !important;
+	}
+}

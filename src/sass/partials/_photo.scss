@@ -1,0 +1,10 @@
+.photo {
+	border: 7px solid #1e8bca;
+	margin-top: 1%;
+}
+
+@media screen and (max-width: 722px) {
+	.photo {
+		width: 70%;
+	}
+}

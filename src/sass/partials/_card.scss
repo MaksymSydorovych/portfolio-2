@@ -1,0 +1,12 @@
+.card-img {
+	width: 100%;
+}
+.card-img:hover {
+	width: 120%;
+	margin-left: -10%;
+	transition: 1s;
+}
+.card {
+	border: solid 5px rgb(161, 207, 161);
+	padding: 0;
+}

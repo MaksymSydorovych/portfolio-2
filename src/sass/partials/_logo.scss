@@ -1,6 +1,17 @@
 .logo__first {
-	color: blue !important;
+	background: -webkit-linear-gradient(#00629b, #033552);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 5em;
+	font-weight: bold;
 }
 .logo__second {
-	color: rgb(118, 118, 214) !important;
+	background: -webkit-linear-gradient(#00629b, #033552);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 5em;
+	font-weight: bold;
+	float: right;
+	padding-top: 30%;
+	margin-left: -7%;
 }
