@@ -4,4 +4,4 @@ Portfolio contain 3 projects.
 Also was created Readme files for all these projects.
 
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://res.cloudinary.com/dkombzxne/image/upload/v1654176676/portfolio/%D0%BF%D0%BE%D1%80%D1%82%D1%84_yk5u52.jpg)
