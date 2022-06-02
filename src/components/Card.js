@@ -11,7 +11,7 @@ function Cards() {
 			</div>
 			<h1>Maksym Sydorovych</h1>
 			<h2 className='mt-2'>PORTFOLIO</h2>
-			<Container className='d-md-flex d-xs-block mt-5'>
+			<Container className='d-lg-flex d-xs-block mt-5 mb-4 px-0'>
 				<Card className='mx-4'>
 					<Card.Title>Project exam</Card.Title>
 					<Card.Body>
@@ -30,7 +30,7 @@ function Cards() {
 							<Card.Img src={exam}></Card.Img>
 						</a>
 
-						<Card.Text className='mt-3'>
+						<Card.Text className='my-2'>
 							<a
 								href='https://github.com/MaksymSydorovych/project-exam'
 								target='_blank'
@@ -58,7 +58,7 @@ function Cards() {
 							<Card.Img src={semester}></Card.Img>
 						</a>
 
-						<Card.Text className='mt-3'>
+						<Card.Text className='my-2'>
 							<a
 								href='https://github.com/MaksymSydorovych/kids-toys'
 								target='_blank'
@@ -84,7 +84,7 @@ function Cards() {
 							<Card.Img src={assigment}></Card.Img>
 						</a>
 
-						<Card.Text className='mt-3'>
+						<Card.Text className='my-2'>
 							<a
 								href='https://github.com/MaksymSydorovych/course-assigment'
 								target='_blank'

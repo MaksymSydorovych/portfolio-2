@@ -5,6 +5,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import Validation from "./Validation";
+import { useState } from "react";
+import CreateToken from "./CreateToken";
+import axios from "axios";
+import Alert from "react-bootstrap/Alert";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
 	name: yup
@@ -19,10 +24,12 @@ const schema = yup.object().shape({
 	message: yup
 		.string()
 		.required("Please enter your message")
-		.min(4, "The name must be at least 10 characters"),
+		.min(10, "The name must be at least 10 characters"),
 });
 
 export default function Contact() {
+	const [sending, setSending] = useState(false);
+	const [submitted, setSubmitted] = useState(false);
 	const {
 		register,
 		handleSubmit,
@@ -30,13 +37,30 @@ export default function Contact() {
 	} = useForm({
 		resolver: yupResolver(schema),
 	});
+	const url = "https://wp.maksy.site/wp-json/wc/v3/products";
+	const token = CreateToken();
+	const headers = {
+		"Content-Type": "application/json",
+		Authorization: `Bearer ${token}`,
+	};
+	async function onSubmit(data) {
+		setSending(true);
 
-	function onSubmit(data) {
-		console.log(data);
+		try {
+			const response = await axios.post(url, data, { headers });
+			console.log("response", response.data);
+
+			setSubmitted(true);
+		} catch (error) {
+			console.log(error);
+		} finally {
+			setSending(false);
+		}
 	}
-	console.log(errors);
+
 	return (
 		<Container>
+			<h1>Contact</h1>
 			<Form onSubmit={handleSubmit(onSubmit)}>
 				<Form.Group className='mt-3'>
 					<Form.Text className='text-muted '>
@@ -59,9 +83,16 @@ export default function Contact() {
 					<Form.Control placeholder='Message' {...register("message")} />
 					{errors.name && <Validation>{errors.message.message}</Validation>}
 				</Form.Group>
-
+				{submitted && (
+					<Alert className='mt-4' variant='success'>
+						newYour message was successfully sent. We will contact you shortly!
+						<Link className='mx-4' to='/'>
+							Go Back
+						</Link>
+					</Alert>
+				)}
 				<Button variant='primary' type='submit' className='mt-4'>
-					Submit
+					{sending ? "Sending.." : "Send"}
 				</Button>
 			</Form>
 		</Container>
